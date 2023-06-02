@@ -1,0 +1,2 @@
+placez le dossier interpolation dans le même répertoire que votre code
+importez avec la commande 'from interpolation.interpolDF import [nom de la fonction]

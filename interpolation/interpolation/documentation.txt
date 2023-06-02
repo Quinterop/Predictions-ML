@@ -1,0 +1,22 @@
+fonctions a importer : 
+
+- interpolation(X1,X2,Y1,Y2,XInconnu)
+prédit y inconnu pour une valeur de x inconnu entre x1 et x2 via l'interpolation linéaire.
+
+- df_interpolation(dataframe1, T_fld_name1, dataframe2, T_fld_name2, fld_name) :
+
+	interpole la colonne fld_name venant de dataframe2 dans dataframe1, en se basant sur les colonnes de temps T_fld_name1/2. retourne dataframe1 + fld_name
+
+    # dataframe1 : données réelles (dataframe pandas)
+    # T_fld_name1 : nom de la colonne de temps de dataframe1 (string)
+    # dataframe2 : df avec les temps et les données de  fld_name à interpoler (dataframe pandas)
+    # T_fld_name2 : nom de la colonne de temps de dataframe2 (string)	
+    # fld_name : nom de la colonne à insérer dans dataframe1 (string)
+s'assurer que les colonnes de temps sont en format datetime ou string de la forme "Y-m-d H:M:S"
+
+
+ - df_generate_int(t_start , t_end, period, T_fld_name ='date_time')
+	crée un dataframe avec une colonne de temps T_fld_name allant de t_start à t_end avec un pas de period. tous les temps sont en int
+
+ - df_generate_datetime(t_start , t_end, period, T_fld_name ='date_time') :
+	idem avec l'unité de temps en datetime de pandas
